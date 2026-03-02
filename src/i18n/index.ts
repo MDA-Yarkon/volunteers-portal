@@ -12,10 +12,11 @@ i18n
       he: { translation: he },
       en: { translation: en },
     },
+    lng: 'he',
     fallbackLng: 'he',
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['localStorage'],
       caches: ['localStorage'],
     },
   });
