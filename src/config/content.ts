@@ -3,7 +3,7 @@ import type { PortalConfig } from './content.schema';
 export const portalConfig: PortalConfig = {
   meta: {
     title: { he: 'פורטל מתנדבים', en: 'Volunteers Portal' },
-    subtitle: { he: 'מד"א - מרחב ירקון', en: 'MDA - Yarkon Branch' },
+    subtitle: { he: 'מד"א - מרחב ירקון', en: 'MDA - Yarkon District' },
     defaultLanguage: 'he',
   },
   sections: [

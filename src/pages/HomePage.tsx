@@ -4,23 +4,24 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { useTranslation } from 'react-i18next';
-import { portalConfig } from '../config/content';
+import { useContent } from '../context/useContent';
 import SectionGroup from '../components/SectionGroup';
 
 export default function HomePage() {
   const { t, i18n } = useTranslation();
+  const { config } = useContent();
   const lang = i18n.language as 'he' | 'en';
 
   const sortedSections = useMemo(
-    () => [...portalConfig.sections].sort((a, b) => a.order - b.order),
-    [],
+    () => [...config.sections].sort((a, b) => a.order - b.order),
+    [config.sections],
   );
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Box sx={{ textAlign: 'center', mb: 5 }}>
         <Typography variant="h3" fontWeight={800} color="primary" gutterBottom>
-          {portalConfig.meta.title[lang]}
+          {config.meta.title[lang]}
         </Typography>
         <Typography variant="h6" color="text.secondary">
           {t('app.hero')}
